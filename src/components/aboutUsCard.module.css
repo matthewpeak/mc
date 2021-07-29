@@ -1,0 +1,14 @@
+
+
+
+.about{
+    display: flex;
+    flex-direction: row;
+    min-height: 25em;
+}
+
+.content{
+    width: 50em;
+    justify-content: center;
+    padding:4em 5em 2em 5em;
+}
