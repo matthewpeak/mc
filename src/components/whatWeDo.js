@@ -1,11 +1,16 @@
 import * as React from 'react'
-import {features,featuresText,featuresSection,top,bottom,icon,iconHolder} from './whatWeDo.module.css'
+import {features,featuresText,featuresSection,top,bottom,icon,iconHolder,whatSection} from './whatWeDo.module.css'
 // import {ReactComponent as Scale } from '../images/svg/scale.svg'
-
+import { useSpring, animated } from 'react-spring'
 const WhatWeDo =()=>{
+    const props = useSpring({
+		to: { opacity: 1,transform:'translateY(0em)' },
+		from: { opacity: 0,transform:'translateY(1em)' },
+	  })
     return(
-    <section className="whatWeDoSection">
-    <div className="inner">
+    <section className={whatSection}>
+    <animated.div style={props}>
+    <div >
         <h2>TYPES OF CASES WE HANDLE</h2>
         <p className={featuresText}>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
         <div className={features}>
@@ -52,6 +57,7 @@ const WhatWeDo =()=>{
         </div>
         <button>learn more</button>
         </div>
+        </animated.div>
     </section>
     )
 }

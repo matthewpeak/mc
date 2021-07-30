@@ -1,10 +1,22 @@
 import * as React from 'react'
-import {logo,intro,introDiv} from './welcome.module.css'
+import {logo,intro,introDiv,imageDiv} from './welcome.module.css'
+import { StaticImage } from "gatsby-plugin-image"
+import { useSpring, animated } from 'react-spring'
+
+
 const Welcome =()=>{
+	const props = useSpring({
+		to: { opacity: 1,transform:'translateY(0em)' },
+		from: { opacity: 0,transform:'translateY(1em)' },
+	  })
+	
     return(
+		<animated.div style={props}>
         <section className={intro}>
 						<div className={introDiv}>
-							<img className={logo} src="images/logo.jpg" alt="logo" />
+							<div className={imageDiv}>
+						<StaticImage src={'../images/logo.jpg'} alt='' display='block' margin='auto'/>
+						    </div>
 							<h1>Legal Professionals</h1>
 							<p>Personal Injury and Medical Malpractice
 								+ 
@@ -16,6 +28,7 @@ const Welcome =()=>{
 							<button>learn more</button>
 						</div>
 		</section>
+		</animated.div>
     )
 }
 

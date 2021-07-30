@@ -1,6 +1,6 @@
 import * as React from "react"
 import AboutUsCard from "./aboutUsCard"
-
+import {aboutUs} from './aboutUs.module.css'
 
 const AboutUs=()=>{
     let cards = [
@@ -25,7 +25,7 @@ const AboutUs=()=>{
 
      cards = cards.map(card =><AboutUsCard key={card.id} title={card.title} text={card.text} image={card.image} alt={card.alt} buttonText={card.buttonText} link={card.link}/>)
     return(
-        <section className="aboutUs">
+        <section className={aboutUs}>
             {cards}
         </section>
     )

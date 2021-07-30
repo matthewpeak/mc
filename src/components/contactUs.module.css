@@ -1,0 +1,55 @@
+.half-fields{
+    display: flex;
+    margin: 2em;
+   
+}
+
+.half-field{
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.half-field label{
+    color: black;
+		font-weight: bold;
+		line-height: 1.5;
+		margin: 0 0 0.7em 0;
+		display: block;
+		font-size: 1.1em;
+}
+
+.half-field input{
+    height: 2.75em;
+
+}
+
+.full-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.full-field label{
+    color: black;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 0.7em 0;
+    display: block;
+    font-size: 1.1em;
+}
+
+
+
+form{
+    margin: 0 0 2em 0;
+    
+}
+.contactDiv{
+    width: calc(66.66666% - 2.5em);
+    margin-left: 9em;
+    padding:3em;
+}
+
+.divider{
+    display: flex;
+}

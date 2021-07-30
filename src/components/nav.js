@@ -3,7 +3,7 @@ import {sideBar,sideDiv,sideA,sideLi} from './nav.module.css'
 
 const Nav =()=>{
     return(	
-    <section className={sideBar}>
+<section className={sideBar}>
 <div className={sideDiv}>
         <nav>
             <ul>
