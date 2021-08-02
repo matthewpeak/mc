@@ -1,8 +1,16 @@
 import * as React from 'react'
 import {halfFields,halfField,fullField,fields,contactDiv,divider} from './contactUs.module.css'
+import { useInView } from "react-intersection-observer"
 
 const ContactUs=()=>{
+    const [ref, inView] = useInView({threshold:.15})
     return(
+        <div style={{
+			transition: "opacity 600ms, transform 600ms",
+			opacity: inView ? 1 : 0,
+			transform: `translateY(${inView ? 0 : 100}px)`,
+			height: `100vh`
+		  }}ref={ref}>
     <div className={contactDiv}>
         <h2>Get in touch</h2>
         <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
@@ -46,7 +54,7 @@ const ContactUs=()=>{
         </div>
         </div>
     </div>
-   
+   </div>
     )
 }
 

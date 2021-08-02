@@ -1,17 +1,22 @@
 import * as React from 'react'
 import {logo,intro,introDiv,imageDiv} from './welcome.module.css'
 import { StaticImage } from "gatsby-plugin-image"
-import { useSpring, animated } from 'react-spring'
+
+import { useInView } from "react-intersection-observer"
 
 
 const Welcome =()=>{
-	const props = useSpring({
-		to: { opacity: 1,transform:'translateY(0em)' },
-		from: { opacity: 0,transform:'translateY(1em)' },
-	  })
+	const [ref, inView] = useInView({threshold:.15})
+
+
 	
     return(
-		<animated.div style={props}>
+		<div style={{
+			transition: "opacity 600ms, transform 600ms",
+			opacity: inView ? 1 : 0,
+			transform: `translateY(${inView ? 0 : 100}px)`,
+			height: `100vh`
+		  }}ref={ref}>
         <section className={intro}>
 						<div className={introDiv}>
 							<div className={imageDiv}>
@@ -28,7 +33,7 @@ const Welcome =()=>{
 							<button>learn more</button>
 						</div>
 		</section>
-		</animated.div>
+		</div>
     )
 }
 

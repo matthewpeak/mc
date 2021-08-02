@@ -1,15 +1,17 @@
 import * as React from 'react'
 import {features,featuresText,featuresSection,top,bottom,icon,iconHolder,whatSection} from './whatWeDo.module.css'
 // import {ReactComponent as Scale } from '../images/svg/scale.svg'
-import { useSpring, animated } from 'react-spring'
+import { useInView } from "react-intersection-observer"
 const WhatWeDo =()=>{
-    const props = useSpring({
-		to: { opacity: 1,transform:'translateY(0em)' },
-		from: { opacity: 0,transform:'translateY(1em)' },
-	  })
+    const [ref, inView] = useInView({threshold:.15})
     return(
     <section className={whatSection}>
-    <animated.div style={props}>
+    <div style={{
+			transition: "opacity 600ms, transform 600ms",
+			opacity: inView ? 1 : 0,
+			transform: `translateY(${inView ? 0 : 100}px)`,
+            height: `100vh`
+		  }}ref={ref}>
     <div >
         <h2>TYPES OF CASES WE HANDLE</h2>
         <p className={featuresText}>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
@@ -57,7 +59,7 @@ const WhatWeDo =()=>{
         </div>
         <button>learn more</button>
         </div>
-        </animated.div>
+        </div>
     </section>
     )
 }

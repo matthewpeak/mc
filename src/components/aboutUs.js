@@ -1,7 +1,7 @@
 import * as React from "react"
 import AboutUsCard from "./aboutUsCard"
 import {aboutUs} from './aboutUs.module.css'
-
+import { useInView } from "react-intersection-observer"
 const AboutUs=()=>{
     let cards = [
         { 
@@ -24,10 +24,20 @@ const AboutUs=()=>{
     ]
 
      cards = cards.map(card =><AboutUsCard key={card.id} title={card.title} text={card.text} image={card.image} alt={card.alt} buttonText={card.buttonText} link={card.link}/>)
+     const [ref, inView] = useInView({threshold:.15})
+
+  
     return(
+        <div style={{
+			transition: "opacity 600ms, transform 600ms",
+			opacity: inView ? 1 : 0,
+			transform: `translateX(${inView ? 0 : -1}em)`,
+            height: `100vh`
+		  }}ref={ref}>
         <section className={aboutUs}>
             {cards}
         </section>
+        </div>
     )
 }
 export default AboutUs
