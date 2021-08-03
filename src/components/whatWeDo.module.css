@@ -43,6 +43,7 @@
 }
 .icon{
     display: flex;
+    margin-left: -3.3em;
 }
 
 .iconHolder{

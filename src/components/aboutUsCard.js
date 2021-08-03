@@ -11,8 +11,8 @@ const AboutUsCard = ({id,image,title,text,buttonText,link,alt}) =>{
 		<StaticImage src={'../images/genericLaw.jpg'} alt='' width='25 em' display='block' posistion='relative' backgroundSize='cover'/>
 			<div className={content}>
 				<div className={inner}>
-						<h2 className='aboutUsTitle'>{title}</h2>
-						<p className='aboutUsText'>{text}</p>
+						<h2 >{title}</h2>
+						<p >{text}</p>
 						<button>{buttonText}</button>
 			 </div>
 			</div>	

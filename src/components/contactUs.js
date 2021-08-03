@@ -29,7 +29,7 @@ const ContactUs=()=>{
             </div>
             <div className={fullField}>
                 <label>Message</label>
-                <textarea name='message'rows='5'/>
+                <textarea  name='message' rows='12'/>
             </div>
             <button>send message</button>
             </div>

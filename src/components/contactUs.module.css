@@ -31,6 +31,8 @@
 .full-field{
     display: flex;
     flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 20px;
 }
 
 .full-field label{
@@ -45,7 +47,7 @@
 
 
 form{
-    margin: 0 0 2em 0;
+    margin: 0 7em 2em 0;
     
 }
 .contactDiv{
@@ -67,5 +69,6 @@ form{
 .divider{
     display: flex;
     justify-content: space-evenly;
-
+    padding-top:30px;
 }
+
