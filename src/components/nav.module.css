@@ -6,10 +6,10 @@
     left: 0;
     overflow-x: hidden;
     overflow-y: auto;
-    position: fixed;
+    position: sticky;
     text-align: right;
     top: 0;
-    width: 9em;
+    width: 20%;
     z-index: 10000;
     
 }

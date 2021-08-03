@@ -6,7 +6,7 @@ const WhatWeDo =()=>{
     const [ref, inView] = useInView({threshold:.15})
     return(
     <section className={whatSection}>
-    <div style={{
+    <div id="what" style={{
 			transition: "opacity 600ms, transform 600ms",
 			opacity: inView ? 1 : 0,
 			transform: `translateY(${inView ? 0 : 100}px)`,

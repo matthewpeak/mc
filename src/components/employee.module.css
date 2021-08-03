@@ -1,0 +1,13 @@
+.employee-holder{
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-div{
+    display: flex;
+}
+
+.employee-infor{
+    display: flex;
+    flex-direction: column;
+}

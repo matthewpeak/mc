@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer"
 const ContactUs=()=>{
     const [ref, inView] = useInView({threshold:.15})
     return(
-        <div style={{
+        <div id="contact" style={{
 			transition: "opacity 600ms, transform 600ms",
 			opacity: inView ? 1 : 0,
 			transform: `translateY(${inView ? 0 : 100}px)`,

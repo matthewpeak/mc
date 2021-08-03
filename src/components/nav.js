@@ -1,16 +1,18 @@
 import * as React from "react"
 import {sideBar,sideDiv,sideA,sideLi} from './nav.module.css'
-
+import {Link} from "gatsby"
 const Nav =()=>{
+    
+
     return(	
 <section className={sideBar}>
 <div className={sideDiv}>
         <nav>
             <ul>
-                <li className={sideLi}><a className={sideA} href="#intro">Welcome</a></li>
-                <li className={sideLi}><a className={sideA} href="#one">Who we are</a></li>
-                <li className={sideLi}><a className={sideA} href="#two">What we do</a></li>
-                <li className={sideLi}><a className={sideA} href="#three">Get in touch</a></li>
+                <li className={sideLi}><Link className={sideA} to="/#welcome">Welcome</Link></li>
+                <li className={sideLi}><Link className={sideA} to="/#who">WHO WE ARE</Link></li>
+                <li className={sideLi}><Link className={sideA} to="/#what">WHAT WE DO</Link></li>
+                <li className={sideLi}><Link className={sideA} to="/#contact">GET IN TOUCH </Link></li>
             </ul>
         </nav>
     </div>

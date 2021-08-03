@@ -2,6 +2,9 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -102,4 +105,13 @@ button:hover:active:after {
 
 p{
     font-size: 1em
+}
+
+.main-wrapper{
+    display: flex;
+    width: 100%;
+}
+
+.content-wrapper{
+    width: 80%;
 }

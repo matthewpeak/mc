@@ -28,7 +28,7 @@ const AboutUs=()=>{
 
   
     return(
-        <div style={{
+        <div id="who" style={{
 			transition: "opacity 600ms, transform 600ms",
 			opacity: inView ? 1 : 0,
 			transform: `translateX(${inView ? 0 : -1}em)`,

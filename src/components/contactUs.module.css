@@ -1,13 +1,17 @@
+.fields{
+    width:calc(100% + 3em)
+}
+
 .half-fields{
     display: flex;
-    margin: 2em;
-   
+   margin: 0 -10px;
 }
 
 .half-field{
     display:flex;
     flex-direction: column;
-    
+    margin: 0 10px;
+    width:calc(50% - 0.75em)
 }
 
 .half-field label{
@@ -45,11 +49,23 @@ form{
     
 }
 .contactDiv{
-    width: calc(66.66666% - 2.5em);
-    margin-left: 14em;
- 
+/* width: calc(66.66666% - 2.5em); */
+ margin-left: 1em;
+}
+.contactDiv p{
+ color: #9d0204;
+
 }
 
+.contactDiv span{
+    color: #9d0204;
+}
+.contactDiv a{
+    color: #9d0204;
+
+}
 .divider{
     display: flex;
+    justify-content: space-evenly;
+
 }

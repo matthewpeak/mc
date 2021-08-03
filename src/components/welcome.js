@@ -11,7 +11,7 @@ const Welcome =()=>{
 
 	
     return(
-		<div style={{
+		<div id="welcome" style={{
 			transition: "opacity 600ms, transform 600ms",
 			opacity: inView ? 1 : 0,
 			transform: `translateY(${inView ? 0 : 100}px)`,
