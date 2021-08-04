@@ -73,7 +73,7 @@
 }
 
 @media screen and (max-width: 1280px) {
-
+   
 	.side-bar {
 		height: 3.5em;
 		left: 0;
@@ -137,7 +137,7 @@
 
 @media screen and (max-width: 736px) {
 
-	#sidebar {
+	.side-bar {
 		display: none;
 	}
 

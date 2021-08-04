@@ -109,9 +109,23 @@ p{
 
 .main-wrapper{
     display: flex;
+    
     width: 100%;
 }
 
 .content-wrapper{
     width: 80%;
+}
+
+@media screen and (max-width: 1280px) {
+.main-wrapper{
+    flex-flow: row wrap;
+}
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
 }
