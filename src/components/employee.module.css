@@ -1,13 +1,16 @@
 .employee-holder{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: 10em;
 }
 
 .employee-div{
     display: flex;
+    padding: 2em;
 }
 
-.employee-infor{
+.employee-info{
     display: flex;
     flex-direction: column;
 }

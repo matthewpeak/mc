@@ -5,6 +5,7 @@ import Welcome from '../components/welcome'
 import AboutUs from '../components/aboutUs'
 import WhatWeDo from "../components/whatWeDo"
 import ContactUs from "../components/contactUs"
+
 import "@fontsource/playfair-display"
 import {contentWrapper,mainWrapper} from './index.module.css';
 if (typeof window !== "undefined") {
@@ -23,6 +24,7 @@ const IndexPage =()=>{
   <ContactUs/>
   </div>
   </div>
+  
   </Fragment>
     )
 }

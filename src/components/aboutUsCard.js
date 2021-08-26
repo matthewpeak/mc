@@ -13,7 +13,7 @@ const AboutUsCard = ({id,image,title,text,buttonText,link,alt}) =>{
 				<div className={inner}>
 						<h2 >{title}</h2>
 						<p >{text}</p>
-						<button>{buttonText}</button>
+				<button>{buttonText}</button>
 			 </div>
 			</div>	
 	</div>

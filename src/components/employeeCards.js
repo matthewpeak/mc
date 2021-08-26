@@ -1,4 +1,4 @@
-import * as React from 'core-js/library/fn/reflect/es7/metadata'
+import * as React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import {employeeDiv,employeeInfo} from './employee.module.css'
 
