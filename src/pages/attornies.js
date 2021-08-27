@@ -3,13 +3,13 @@ import { Fragment } from "react"
 import Employees from "../components/employees"
 import "@fontsource/playfair-display"
 import {attorniesWrapper} from "./attornies.module.css"
+import Header from '../components/header'
 
 const Attornies=()=>{
     return(
     <Fragment>
-        <div className={attorniesWrapper}>
+      <Header/>
         <Employees/>
-        </div>
     </Fragment>
     )
 }

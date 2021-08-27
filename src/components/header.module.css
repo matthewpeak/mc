@@ -1,0 +1,22 @@
+.header {
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    position: sticky;
+    z-index: 1;
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home{
+    color:red;
+    opacity:1;
+    float:right;
+    margin-right: 50px;
+}
+

@@ -7,10 +7,17 @@
 
 .employee-div{
     display: flex;
-    padding: 2em;
+   justify-content: space-between;
 }
 
 .employee-info{
     display: flex;
     flex-direction: column;
+    color: #9d0204;
+   margin:4em
+}
+
+.img{
+    height: 200px;
+    width: 200px;
 }
