@@ -1,9 +1,17 @@
-import * as React from 'react'
+import React, {useEffect,useRef} from 'react'
 import {halfFields,halfField,fullField,fields,contactDiv,divider} from './contactUs.module.css'
 import { useInView } from "react-intersection-observer"
 
-const ContactUs=()=>{
-    const [ref, inView] = useInView({threshold:.15})
+const ContactUs=({handleLoc})=>{
+    const [ref, inView] = useInView({threshold:.4})
+    const [c,d] = useInView({threshold:1})
+
+    useEffect(() => {
+        handleLoc('contact')
+        return () => {
+            handleLoc('')
+          };
+    },[d])
     return(
         <div id="contact" style={{
 			transition: "opacity 600ms, transform 600ms",
@@ -11,15 +19,16 @@ const ContactUs=()=>{
 			transform: `translateY(${inView ? 0 : 100}px)`,
 			height: `100vh`
 		  }}ref={ref}>
+         
     <div className={contactDiv}>
         <h2>Get in touch</h2>
         <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
         <div className={divider}>
-        <form >
+        <form ref={c}>
            <div className={fields}>
             <div className={halfFields}>
             <div className={halfField}>
-            <label>Name</label>
+            <label >Name</label>
             <input type='text' name='name'/>
             </div>
             <div className={halfField}>

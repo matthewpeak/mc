@@ -1,8 +1,8 @@
-import * as React from "react"
+import React,{useEffect} from "react"
 import AboutUsCard from "./aboutUsCard"
 import {aboutUs} from './aboutUs.module.css'
 import { useInView } from "react-intersection-observer"
-const AboutUs=()=>{
+const AboutUs=({handleLoc})=>{
     let cards = [
         { 
             id:1,
@@ -24,9 +24,14 @@ const AboutUs=()=>{
     ]
 
      cards = cards.map(card =><AboutUsCard key={card.id} title={card.title} text={card.text} image={card.image} alt={card.alt} buttonText={card.buttonText} link={card.link}/>)
-     const [ref, inView] = useInView({threshold:.15})
-
-  
+     const [ref, inView] = useInView({threshold:.4})
+     const [c,d] = useInView({threshold:.9})
+     useEffect(() => {
+          handleLoc('about')
+          return () => {
+            handleLoc('')
+          };
+    }, [d])
     return(
         <div id="who" style={{
 			transition: "opacity 600ms, transform 600ms",
@@ -34,7 +39,7 @@ const AboutUs=()=>{
 			transform: `translateX(${inView ? 0 : -1}em)`,
             height: `100vh`
 		  }}ref={ref}>
-        <section className={aboutUs}>
+        <section ref={c} className={aboutUs}>
             {cards}
         </section>
         </div>

@@ -1,17 +1,26 @@
-import * as React from 'react'
+import React,{useEffect} from 'react'
 import {features,featuresText,featuresSection,top,bottom,icon,iconHolder,whatSection} from './whatWeDo.module.css'
 // import {ReactComponent as Scale } from '../images/svg/scale.svg'
 import { useInView } from "react-intersection-observer"
-const WhatWeDo =()=>{
-    const [ref, inView] = useInView({threshold:.15})
+const WhatWeDo =({handleLoc})=>{
+    const [ref, inView] = useInView({threshold:.4})
+    const [c,d] = useInView({threshold:1})
+    useEffect(() => {
+        
+          handleLoc('what')
+          return () => {
+            handleLoc('')
+          };
+    }, [d])
     return(
-    <section className={whatSection}>
-    <div id="what" style={{
+        <div id="what" style={{
 			transition: "opacity 600ms, transform 600ms",
 			opacity: inView ? 1 : 0,
 			transform: `translateY(${inView ? 0 : 100}px)`,
             height: `100vh`
 		  }}ref={ref}>
+    <section className={whatSection}>
+    
     <div >
         <h2>TYPES OF CASES WE HANDLE</h2>
         <p className={featuresText}>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
@@ -22,7 +31,7 @@ const WhatWeDo =()=>{
                 <span className={iconHolder}>
                 <svg aria-hidden="true" height='2.1em' paddingRight="1em" width='2.1em' focusable="false" data-prefix="fas" data-icon="user-injured" class="svg-inline--fa fa-user-injured fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M277.37 11.98C261.08 4.47 243.11 0 224 0c-53.69 0-99.5 33.13-118.51 80h81.19l90.69-68.02zM342.51 80c-7.9-19.47-20.67-36.2-36.49-49.52L239.99 80h102.52zM224 256c70.69 0 128-57.31 128-128 0-5.48-.95-10.7-1.61-16H97.61c-.67 5.3-1.61 10.52-1.61 16 0 70.69 57.31 128 128 128zM80 299.7V512h128.26l-98.45-221.52A132.835 132.835 0 0 0 80 299.7zM0 464c0 26.51 21.49 48 48 48V320.24C18.88 344.89 0 381.26 0 422.4V464zm256-48h-55.38l42.67 96H256c26.47 0 48-21.53 48-48s-21.53-48-48-48zm57.6-128h-16.71c-22.24 10.18-46.88 16-72.89 16s-50.65-5.82-72.89-16h-7.37l42.67 96H256c44.11 0 80 35.89 80 80 0 18.08-6.26 34.59-16.41 48H400c26.51 0 48-21.49 48-48v-41.6c0-74.23-60.17-134.4-134.4-134.4z"></path></svg>           
                 </span>
-                <h3>Personal Injury</h3>
+                <h3 ref={c}>Personal Injury</h3>
                 </span>
                 <p className={featuresText}>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
             </section>
@@ -59,8 +68,9 @@ const WhatWeDo =()=>{
         </div>
         <button>learn more</button>
         </div>
-        </div>
+        
     </section>
+    </div>
     )
 }
 
