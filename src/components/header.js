@@ -5,9 +5,9 @@ const Header=()=>{
     return(
        <div className={header}>
            <div className={headerContent}>
-               <div></div>
+               {/* <div></div> */}
            <StaticImage src={'../images/logo.jpg'} alt='' display='block' height='200px' width='200px' margin='auto'/>
-               <span className={home}>HOME</span>
+               {/* <span className={home}>HOME</span> */}
            </div>
        </div>
     )

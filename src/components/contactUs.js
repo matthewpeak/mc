@@ -1,6 +1,7 @@
 import React, {useEffect,useRef} from 'react'
 import {halfFields,halfField,fullField,fields,contactDiv,divider} from './contactUs.module.css'
 import { useInView } from "react-intersection-observer"
+// import Footer from './footer'
 
 const ContactUs=({handleLoc})=>{
     const [ref, inView] = useInView({threshold:.4})
@@ -63,6 +64,7 @@ const ContactUs=({handleLoc})=>{
         </div>
         </div>
     </div>
+    
    </div>
     )
 }

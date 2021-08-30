@@ -25,7 +25,7 @@ const AboutUs=({handleLoc})=>{
 
      cards = cards.map(card =><AboutUsCard key={card.id} title={card.title} text={card.text} image={card.image} alt={card.alt} buttonText={card.buttonText} link={card.link}/>)
      const [ref, inView] = useInView({threshold:.4})
-     const [c,d] = useInView({threshold:.9})
+     const [c,d] = useInView({threshold:.7})
      useEffect(() => {
           handleLoc('about')
           return () => {

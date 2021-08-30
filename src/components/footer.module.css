@@ -1,0 +1,15 @@
+.footer{
+    display: flex;
+    background: black;
+    color: #9d0204;
+    justify-content: space-between;
+}
+
+.contactHolder{
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+.disclaimer{
+    margin: 3em;
+}
