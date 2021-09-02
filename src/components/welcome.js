@@ -1,11 +1,11 @@
 import React,{useEffect} from 'react'
 import {logo,intro,introDiv,imageDiv} from './welcome.module.css'
-import { StaticImage } from "gatsby-plugin-image"
-
+import { GatsbyImage,getImage } from "gatsby-plugin-image"
 import { useInView } from "react-intersection-observer"
 
 
-const Welcome =({handleLoc})=>{
+
+const Welcome =({handleLoc,title,text,image})=>{
 	const [ref, inView] = useInView({threshold:.4})
     const [c,d] = useInView({threshold:1})
 	useEffect(() => {
@@ -14,8 +14,12 @@ const Welcome =({handleLoc})=>{
 				handleLoc('')
 			  };
     }, [d])
+	 
+	
+	
 	
     return(
+		
 		<div id="welcome" style={{
 			transition: "opacity 600ms, transform 600ms",
 			opacity: inView ? 1 : 0,
@@ -25,16 +29,10 @@ const Welcome =({handleLoc})=>{
         <section className={intro}>
 						<div className={introDiv}>
 							<div className={imageDiv}>
-						<StaticImage src={'../images/logo.jpg'} alt='' display='block' margin='auto'/>
+						    <GatsbyImage image={getImage(image)} alt=''/>
 						    </div>
-							<h1 ref={c}>Legal Professionals</h1>
-							<p>Personal Injury and Medical Malpractice
-								+ 
-								Criminal Defense and Traffic Tickets
-								+
-								Professional License Defense 
-								+
-								Police Misconduct</p>
+							<h1 ref={c}>{title}</h1>
+							<p>{text}</p>
 							<button>learn more</button>
 						</div>
 		</section>
