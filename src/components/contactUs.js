@@ -3,7 +3,7 @@ import {halfFields,halfField,fullField,fields,contactDiv,divider} from './contac
 import { useInView } from "react-intersection-observer"
 // import Footer from './footer'
 
-const ContactUs=({handleLoc})=>{
+const ContactUs=({handleLoc,title,titleDesc,email,phone,mail,fax,address})=>{
     const [ref, inView] = useInView({threshold:.4})
     const [c,d] = useInView({threshold:1})
 
@@ -22,8 +22,8 @@ const ContactUs=({handleLoc})=>{
 		  }}ref={ref}>
          
     <div className={contactDiv}>
-        <h2>Get in touch</h2>
-        <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+        <h2>{title}</h2>
+        <p>{titleDesc}</p>
         <div className={divider}>
         <form ref={c}>
            <div className={fields}>
@@ -48,17 +48,23 @@ const ContactUs=({handleLoc})=>{
             <ul>
                 <li>
 					<h3>Address</h3>
-					<span class="contact-addy">12345 Somewhere Road #654<br />
-					Nashville, TN 00000-0000<br />
-					USA</span>
+					<span class="contact-addy">{address}</span>
                 </li>
                 <li>
 					<h3>Email</h3>
-					<a class="contact-email" href="#">user@untitled.tld</a>
+					<a class="contact-email" href="#">{email}</a>
 				</li>
                 <li>
 					<h3>Phone</h3>
-					<span class="contact-phone">(000) 000-0000</span>
+					<span class="contact-phone">{phone}</span>
+				</li>
+                <li>
+					<h3>Mail</h3>
+					<span class="contact-phone">{mail}</span>
+				</li>
+                <li>
+					<h3>Fax</h3>
+					<span class="contact-phone">{fax}</span>
 				</li>
             </ul>
         </div>

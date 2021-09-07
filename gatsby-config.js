@@ -18,7 +18,7 @@ module.exports = {
     options: {
       apiURL: `http://localhost:1337`,
       queryLimit: 1000, // Defaults to 100
-      singleTypes: [`welcome`,`what-we-do`]
+      singleTypes: [`contact-us`,`welcome`,`what-we-do`,`footer`,`about-us-page`,`employees`]
     },
   },],
 };

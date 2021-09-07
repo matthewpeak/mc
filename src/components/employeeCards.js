@@ -2,10 +2,11 @@ import * as React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import {employeeDiv,employeeInfo,aImage} from './employee.module.css'
 
-const Employee =({title,bio})=>{
+const Employee =({title,bio,pic})=>{
+    console.log(pic)
     return(
     <div className={employeeDiv}>
-        <StaticImage src={'../images/drew.jpg'} display='block' height={400} width={400} posistion='relative' backgroundSize='cover'/>
+        <img src={"http://localhost:1337"+pic.url} height={200} width={200} />
         <div className={employeeInfo}> 
             <h1>{title}</h1>
             <p>{bio}</p>
