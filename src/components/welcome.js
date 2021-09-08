@@ -28,12 +28,12 @@ const Welcome =({handleLoc,title,text,image})=>{
 		  }}ref={ref}>
         <section className={intro}>
 						<div className={introDiv}>
-							<div className={imageDiv}>
+							<div ref={c} className={imageDiv}>
 						    <GatsbyImage image={getImage(image)} alt=''/>
 						    </div>
-							<h1 ref={c}>{title}</h1>
-							<p>{text}</p>
-							<button>learn more</button>
+							<h1 >{title}</h1>
+							<p >{text}</p>
+							<button >learn more</button>
 						</div>
 		</section>
 		</div>

@@ -9,14 +9,18 @@
 }
 .header-content{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding-left: 50px;
 }
 
 .home{
+   
     color:red;
     opacity:1;
     float:right;
-    margin-right: 50px;
+    padding-right: 50px;
 }
-
+.hidden{
+    margin-left: 50px;
+}

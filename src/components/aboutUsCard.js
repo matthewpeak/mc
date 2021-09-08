@@ -9,7 +9,6 @@ const AboutUsCard = ({image,title,text,buttonText,link,alt}) =>{
 		navigate("/"+link+"/")
 	}
 	
-	// you are going to need to figure out Gatsby Image to display images passed via props
     return(
     <div className={about}>
 	<img src={"http://localhost:1337"+image[0].url} alt={alt} height={200} width={200}/>

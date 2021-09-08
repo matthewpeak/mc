@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
+import { navigate } from "gatsby"
 import {features,featuresText,featuresSection,top,bottom,icon,iconHolder,whatSection} from './whatWeDo.module.css'
-// import {ReactComponent as Scale } from '../images/svg/scale.svg'
 import { useInView } from "react-intersection-observer"
 
 const WhatWeDo =({handleLoc,title,titleDesc,topRightTitle,topRightDesc,topLeftTitle,topLeftDesc,bottomRightTitle,bottomRightDesc,bottomLeftTitle,bottomLeftDesc,btnTxt})=>{
@@ -13,7 +13,9 @@ const WhatWeDo =({handleLoc,title,titleDesc,topRightTitle,topRightDesc,topLeftTi
             handleLoc('')
           };
     }, [d])
-    
+    const handleClick=()=>{
+		navigate("/cases/")
+	}
     
     return(
         <div id="what" style={{
@@ -69,7 +71,7 @@ const WhatWeDo =({handleLoc,title,titleDesc,topRightTitle,topRightDesc,topLeftTi
             </section>
             </div>
         </div>
-        <button>{btnTxt}</button>
+        <button onClick={handleClick}>{btnTxt}</button>
         </div>
         
     </section>
