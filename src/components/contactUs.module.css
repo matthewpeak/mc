@@ -71,4 +71,7 @@ form{
     justify-content: space-evenly;
     padding-top:30px;
 }
-
+.titleDiv{
+    padding-left: 2em;
+    padding-right: 2em;
+}

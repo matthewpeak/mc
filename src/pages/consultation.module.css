@@ -7,10 +7,26 @@
     padding: 1em;
 }
 
+
+.inputH label{
+    color: black;
+		font-weight: bold;
+		line-height: 1.5;
+		margin: 0 0 0.7em 0;
+		display: block;
+		font-size: 1.1em;
+}
+
+.inputH input{
+    height: 2.75em;
+
+}
+
 .consForm{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0;
 }
 
 .radioH{
@@ -24,7 +40,9 @@
 }
 
 .text-area{
-    padding: 3em;
+    
+    line-height: 1.5;
+    
 }
 
 .btn-hldr{

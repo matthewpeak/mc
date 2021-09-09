@@ -11,7 +11,7 @@ const AboutUsCard = ({image,title,text,buttonText,link,alt}) =>{
 	
     return(
     <div className={about}>
-	<img src={"http://localhost:1337"+image[0].url} alt={alt} height={200} width={200}/>
+	<img src={"http://localhost:1337"+image[0].url} alt={alt} height={250} width={250}/>
 			<div className={content}>
 				<div className={inner}>
 						<h2 >{title}</h2>

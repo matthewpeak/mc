@@ -1,5 +1,5 @@
 import React from 'react'
-import {caseHolder} from './caseCard.module.css'
+import {caseHolder,caseText} from './caseCard.module.css'
 
 const CaseCard=({header,content})=>{
 
@@ -7,7 +7,7 @@ const CaseCard=({header,content})=>{
     return(
         <div className={caseHolder}>
             <h1>{header}</h1>
-            <p>
+            <p className={caseText}>
                 {content}
             </p>
         </div>

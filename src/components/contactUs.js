@@ -1,12 +1,12 @@
 import React, {useEffect,useRef} from 'react'
-import {halfFields,halfField,fullField,fields,contactDiv,divider} from './contactUs.module.css'
+import {halfFields,halfField,fullField,fields,contactDiv,divider,titleDiv} from './contactUs.module.css'
 import { useInView } from "react-intersection-observer"
 // import Footer from './footer'
 
 const ContactUs=({handleLoc,title,titleDesc,email,phone,mail,fax,address})=>{
     const [ref, inView] = useInView({threshold:.4})
     const [c,d] = useInView({threshold:1})
-
+  
     useEffect(() => {
         handleLoc('contact')
         return () => {
@@ -22,10 +22,12 @@ const ContactUs=({handleLoc,title,titleDesc,email,phone,mail,fax,address})=>{
 		  }}ref={ref}>
          
     <div className={contactDiv}>
+        <div className={titleDiv}>
         <h2>{title}</h2>
         <p>{titleDesc}</p>
+        </div>
         <div className={divider}>
-        <form ref={c}>
+        <form  action="https://formspree.io/f/mvoddykl" method="POST" ref={c}>
            <div className={fields}>
             <div className={halfFields}>
             <div className={halfField}>
@@ -41,7 +43,7 @@ const ContactUs=({handleLoc,title,titleDesc,email,phone,mail,fax,address})=>{
                 <label>Message</label>
                 <textarea  name='message' rows='12'/>
             </div>
-            <button>send message</button>
+            <button type='submit'>send message</button>
             </div>
         </form>
         <div>

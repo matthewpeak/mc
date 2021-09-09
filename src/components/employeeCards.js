@@ -6,9 +6,9 @@ const Employee =({title,bio,pic})=>{
     console.log(pic)
     return(
     <div className={employeeDiv}>
-        <img src={"http://localhost:1337"+pic.url} height={200} width={200} />
+        <img src={"http://localhost:1337"+pic.url} height={260} width={260} />
         <div className={employeeInfo}> 
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <p>{bio}</p>
         </div>
     </div>

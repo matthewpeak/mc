@@ -11,16 +11,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 50px;
+    padding-left: 60px;
 }
 
 .home{
-   
-    color:red;
+    background: black;
+    
     opacity:1;
     float:right;
-    padding-right: 50px;
+    width:100px;
+    height: 150px;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+}
+.home:hover{
+    background: white;
 }
 .hidden{
     margin-left: 50px;
 }
+.homeLabel{
+ color: #9d0204;;
+}
+
