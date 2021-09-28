@@ -60,7 +60,7 @@ const Consultation=()=>{
                 </label>
             </div>
            
-            <textarea className={textArea} name="message" placeholder="Message" rows='12' value={values.message} name="message" onChange={myChangeHandler}></textarea>
+            <textarea className={textArea}  placeholder="Message" rows='12' value={values.message} name="message" onChange={myChangeHandler}></textarea>
             
             <div className={btnHldr}>
             <button type="submit" >submit</button>

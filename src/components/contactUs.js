@@ -1,4 +1,4 @@
-import React, {useEffect,useRef} from 'react'
+import React, {useEffect} from 'react'
 import {halfFields,halfField,fullField,fields,contactDiv,divider,titleDiv} from './contactUs.module.css'
 import { useInView } from "react-intersection-observer"
 // import Footer from './footer'
@@ -12,7 +12,7 @@ const ContactUs=({handleLoc,title,titleDesc,email,phone,mail,fax,address})=>{
         return () => {
             handleLoc('')
           };
-    },[d])
+    },[d,handleLoc])
     return(
         <div id="contact" style={{
 			transition: "opacity 600ms, transform 600ms",
@@ -31,16 +31,16 @@ const ContactUs=({handleLoc,title,titleDesc,email,phone,mail,fax,address})=>{
            <div className={fields}>
             <div className={halfFields}>
             <div className={halfField}>
-            <label >Name</label>
+            <span >Name</span>
             <input type='text' name='name'/>
             </div>
             <div className={halfField}>
-            <label>Email</label>
+            <span>Email</span>
             <input type='text' name='email'/>
             </div>
             </div>
             <div className={fullField}>
-                <label>Message</label>
+                <span>Message</span>
                 <textarea  name='message' rows='12'/>
             </div>
             <button type='submit'>send message</button>
@@ -54,7 +54,7 @@ const ContactUs=({handleLoc,title,titleDesc,email,phone,mail,fax,address})=>{
                 </li>
                 <li>
 					<h3>Email</h3>
-					<a class="contact-email" href="#">{email}</a>
+					<span class="contact-email" >{email}</span>
 				</li>
                 <li>
 					<h3>Phone</h3>

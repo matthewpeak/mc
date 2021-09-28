@@ -16,8 +16,8 @@ module.exports = {
   },  {
     resolve: `gatsby-source-strapi`,
     options: {
-      apiURL: `http://localhost:1337`,
-      queryLimit: 1000, // Defaults to 100
+      apiURL: `https://intense-beach-34041.herokuapp.com`,
+      queryLimit: 5000, // Defaults to 100
       singleTypes: [`contact-us`,`welcome`,`what-we-do`,`footer`,`about-us-page`,`employees`,`cases`]
     },
   },],

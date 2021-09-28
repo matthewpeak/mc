@@ -11,8 +11,8 @@ const Header=()=>{
            <div className={headerContent}>
                 <div className={hidden}></div> 
            <StaticImage src={'../images/logo.jpg'} alt='' display='block' height='200px' width='200px' margin='auto'/>
-                <div onClick={handleClick} className={home}>
-                <a className={homeLabel} >HOME</a> 
+                <div onClick={handleClick} role='button' onKeyDown={this.handleClick}  tabIndex={0}className={home}>
+                <span className={homeLabel} >HOME</span> 
                 </div>
            </div>
        </div>

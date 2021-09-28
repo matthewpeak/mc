@@ -1,5 +1,5 @@
 import React,{useEffect} from 'react'
-import {logo,intro,introDiv,imageDiv} from './welcome.module.css'
+import {intro,introDiv,imageDiv} from './welcome.module.css'
 import { GatsbyImage,getImage } from "gatsby-plugin-image"
 import { useInView } from "react-intersection-observer"
 
@@ -13,7 +13,7 @@ const Welcome =({handleLoc,title,text,image})=>{
 			return () => {
 				handleLoc('')
 			  };
-    }, [d])
+    }, [d,handleLoc])
 	 
 	
 	

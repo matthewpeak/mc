@@ -12,7 +12,7 @@ const WhatWeDo =({handleLoc,title,titleDesc,topRightTitle,topRightDesc,topLeftTi
           return () => {
             handleLoc('')
           };
-    }, [d])
+    }, [d,handleLoc])
     const handleClick=()=>{
 		navigate("/cases/")
 	}

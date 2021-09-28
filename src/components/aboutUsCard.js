@@ -1,7 +1,7 @@
 import * as React from "react"
 import { navigate } from "gatsby"
 
-import {about,content,inner} from './aboutUsCard.module.css'
+import {about,content,aboutUsCardImg} from './aboutUsCard.module.css'
 
 const AboutUsCard = ({image,title,text,buttonText,link,alt}) =>{
 	
@@ -11,9 +11,9 @@ const AboutUsCard = ({image,title,text,buttonText,link,alt}) =>{
 	
     return(
     <div className={about}>
-	<img src={"http://localhost:1337"+image[0].url} alt={alt} height={250} width={250}/>
+	<img src={"https://intense-beach-34041.herokuapp.com"+image[0].url} alt={alt} className={aboutUsCardImg} />
 			<div className={content}>
-				<div className={inner}>
+				<div >
 						<h2 >{title}</h2>
 						<p >{text}</p>
 				<button onClick={handleClick}>{buttonText}</button>
