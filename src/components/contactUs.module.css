@@ -91,5 +91,7 @@ form{
         padding-top: 1em;
         width: 15em
     }
-
+    .titleDiv{
+        margin: auto;
+    }
 }
