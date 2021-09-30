@@ -129,3 +129,18 @@ p{
 }
 
 }
+
+@media screen and (max-width: 736px) {
+   
+
+    .main-wrapper{
+        margin: auto;
+    }
+    .content-wrapper{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    }
+
+}

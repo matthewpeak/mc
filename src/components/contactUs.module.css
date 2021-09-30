@@ -78,7 +78,9 @@ form{
 
 
 @media screen and (max-width: 736px) {
-   
+   .contactDiv{
+      margin: auto;
+   }
     .phys{
         display: none;
     }
