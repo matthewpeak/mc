@@ -51,7 +51,7 @@ form{
     
 }
 .contactDiv{
-/* width: calc(66.66666% - 2.5em); */
+
  margin-left: 1em;
 }
 .contactDiv p{
@@ -84,10 +84,26 @@ form{
     }
 	.half-fields{
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .half-field{
         padding-top: 1em;
         width: 15em
     }
-
+    .fields{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .half-field span{
+        text-align: center;
+    }
+    .full-field span{
+        text-align: center;
+    }
+    form{
+        margin-left: 3em;
+    }
 }

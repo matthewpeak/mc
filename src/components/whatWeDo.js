@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import { navigate } from "gatsby"
-import {features,featuresText,featuresSection,top,bottom,icon,iconHolder,whatSection} from './whatWeDo.module.css'
+import {features,featuresText,featuresSection,top,bottom,icon,iconHolder,whatSection,titleSection} from './whatWeDo.module.css'
 import { useInView } from "react-intersection-observer"
 
 const WhatWeDo =({handleLoc,title,titleDesc,topRightTitle,topRightDesc,topLeftTitle,topLeftDesc,bottomRightTitle,bottomRightDesc,bottomLeftTitle,bottomLeftDesc,btnTxt})=>{
@@ -27,8 +27,10 @@ const WhatWeDo =({handleLoc,title,titleDesc,topRightTitle,topRightDesc,topLeftTi
     <section className={whatSection}>
     
     <div >
+        <div className={titleSection}>
         <h2>{title}</h2>
         <p className={featuresText}>{titleDesc}</p>
+        </div>
         <div className={features}>
             <div className={top}>
             <section className={featuresSection}>

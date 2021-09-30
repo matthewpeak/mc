@@ -35,6 +35,7 @@
 .image-div{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 736px) {
@@ -43,6 +44,14 @@
     .intro{
         margin: auto;
     }
-   
-
+    .intro-div p{
+        text-align: center;
+    }
+   .intro-div h1{
+       text-align: center;
+   }
+   .intro-div {
+     display: flex;
+     flex-direction: column;
+   }
 }
