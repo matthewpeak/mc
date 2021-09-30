@@ -23,3 +23,11 @@
     height: 300px;
     object-fit: scale-down;
 }
+
+@media screen and (max-width: 736px) {
+
+	.aboutUsCardImg{
+        display: none;
+    }
+
+}

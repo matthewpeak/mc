@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {halfFields,halfField,fullField,fields,contactDiv,divider,titleDiv} from './contactUs.module.css'
+import {halfFields,halfField,fullField,fields,contactDiv,divider,titleDiv,phys} from './contactUs.module.css'
 import { useInView } from "react-intersection-observer"
 // import Footer from './footer'
 
@@ -46,7 +46,7 @@ const ContactUs=({handleLoc,title,titleDesc,email,phone,mail,fax,address})=>{
             <button type='submit'>send message</button>
             </div>
         </form>
-        <div>
+        <div className={phys}>
             <ul>
                 <li>
 					<h3>Address</h3>

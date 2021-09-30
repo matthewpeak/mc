@@ -75,3 +75,19 @@ form{
     padding-left: 2em;
     padding-right: 2em;
 }
+
+
+@media screen and (max-width: 736px) {
+   
+    .phys{
+        display: none;
+    }
+	.half-fields{
+        flex-direction: column;
+    }
+    .half-field{
+        padding-top: 1em;
+        width: 15em
+    }
+
+}

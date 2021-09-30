@@ -55,3 +55,14 @@
     margin-left: 1em;
     padding-top: 2em;
 }
+
+@media screen and (max-width: 736px) {
+
+	.top{
+		flex-direction: column;
+	}
+    .bottom{
+        flex-direction: column;
+    }
+
+}
