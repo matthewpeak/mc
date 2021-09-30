@@ -136,6 +136,8 @@ p{
     .main-wrapper{
         margin: auto;
     }
-   
+    .content-wrapper{
+        width: 100%;
+    }
 
 }
