@@ -65,4 +65,8 @@
         flex-direction: column;
     }
 
+    .what-section{
+     margin: auto;
+    }
+
 }
