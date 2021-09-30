@@ -29,5 +29,9 @@
 	.aboutUsCardImg{
         display: none;
     }
+    .about{
+     margin: auto;
+       
+    }
 
 }
